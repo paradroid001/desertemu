@@ -1,0 +1,16 @@
+version: "3.8"
+name: deepemu
+services:
+  emulator:
+    build:
+      context: ./emulator
+      dockerfile: Dockerfile.yml
+    volumes:
+      - ../test:/test
+  build-platform:
+    container_name: build-platform
+    build:
+      context: ./build-platform
+      dockerfile: Dockerfile.yml
+    volumes:
+      - ../test:/test

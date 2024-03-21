@@ -1,0 +1,18 @@
+version: "3"
+services:
+  qemu:
+    container_name: qemu
+    image: qemux/qemu-arm
+    environment:
+      BOOT: "https://dl-cdn.alpinelinux.org/alpine/v3.19/releases/aarch64/alpine-virt-3.19.1-aarch64.iso"
+    #devices:
+    #  - /dev/kvm
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - 8006:8006
+    stop_grace_period: 2m
+    restart: on-failure
+    volumes:
+      - ./src:/src
+    

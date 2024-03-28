@@ -4,7 +4,8 @@ services:
     container_name: qemu
     image: qemux/qemu-arm
     environment:
-      BOOT: "https://dl-cdn.alpinelinux.org/alpine/v3.19/releases/aarch64/alpine-virt-3.19.1-aarch64.iso"
+      #BOOT: "https://dl-cdn.alpinelinux.org/alpine/v3.19/releases/aarch64/alpine-virt-3.19.1-aarch64.iso"
+      BOOT: "../boot/alpine-virt-3.19.1-aarch64.iso"
     #devices:
     #  - /dev/kvm
     cap_add:

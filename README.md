@@ -11,7 +11,7 @@ On build platform:
   `gcc -o basic.x86 basic.c -g`
 - arm (compile static to avoid needing ld-linux-armhf.so.3 and arm's libc at runtime until I know how to install.)
 
-  `arm-linux-gnueabihf-gcc-11 - static -O0 -g -o basic.arm basic.c`
+  `arm-linux-gnueabihf-gcc-11 -static -O0 -g -o basic.arm basic.c`
 
 On emulator (run with arg and wait for debugger):
 - x86:
